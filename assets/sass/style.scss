@@ -1,0 +1,125 @@
+$font_family: 'open_sansregular', sans-serif ;
+
+body {
+	font: 18px/30px $font_family;
+	background: #f1f1f1;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6 , p , hr{
+  	margin: 0;
+}
+
+* ,
+*:before ,
+*:after {
+	box-sizing: border-box;
+}
+p {
+	font-size: 14px;
+	line-height: 16px;
+}
+h3 {
+	font-size: 24px;
+	line-height: 26px;
+}
+
+
+.container {
+	content: '';
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(45deg, #ff512f 0%,#ff0084 100%,#ff0084 100%);
+}
+.form-account{
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    margin: 0;
+    width: 85%;
+    min-width: 320px;
+    max-width: 460px;
+    position: fixed;
+    padding: 30px;
+    background: #f8f5f2;
+    transform: translate(-50%, -50%);
+    transition: transform 0.6s ease-out;
+}
+/* активный модальный блок */
+.overlay:target+.form-account {
+	transform: translate(-50%, 0);
+	top: 20%;
+}
+/*  кнопкa закрытия */
+.close {
+    top: 60px;
+    right: -60px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    transition: all ease .8s;
+     background: url(../img/menu-btn-copy.png) center center no-repeat;
+ }
+.close:hover {
+	background-color:green;
+}
+/*  кнопкa закрытия */
+.form-account__title {
+	font-size: 24px;
+	line-height: 26px;
+	padding-left: 35px;
+	background: url(../img/key.png) no-repeat center left;
+}
+
+.form-account__subtitle {
+	font-size: 13px;
+	line-height: 22px;
+	color: #7a7b7f;
+	margin: 30px 0;
+}
+.form-account__link {
+	text-decoration: none;
+	color: red;
+}
+.form-account__link:hover {
+	color: green;
+}
+
+
+.form-wrap {
+	display: flex;
+	.form-wrap--col {
+		width: 50%;
+	}
+	.form-wrap--col:first-child {
+		margin-right: 15px;
+	}
+}
+.form-sing__input {
+	width: 100%;
+	border: none;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+.form-sing__input::placeholder {
+	font-size: 12px;
+}
+.button-wrap {
+	padding: 2px 0;
+}
+.btn {
+	width: 100%;
+	padding: 15px 130px;
+	border-radius: 5px;
+	border:none;
+	box-shadow: inset 0px -4px 0px -2px red;
+	outline: none;
+	background: #ea355a;
+	color: #fff;
+	transition: opacity .3s ease;
+}
+.btn:hover {
+	opacity: 0.7;
+}
